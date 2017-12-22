@@ -1,0 +1,20 @@
+{
+  "name": "spot-instance",
+  "version": "1.0.0",
+  "description": "aws api call to create a spot instance",
+  "main": "server.js",
+  "dependencies": {
+    "aws-sdk": "^2.174.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "  "
+  },
+  "author": "",
+  "license": "ISC"
+}
