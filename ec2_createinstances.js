@@ -8,7 +8,7 @@ AWS.config.loadFromPath('./config.json');
 var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
-   ImageId: 'ami-e41b618b', // Ubuntu Server 16.04 LTS
+   ImageId: 'ami-f3e5aa9c', // Ubuntu Server 16.04 LTS
    InstanceType: 't2.micro',
    MinCount: 1,
    MaxCount: 1
@@ -33,8 +33,13 @@ ec2.runInstances(params, function(err, data) {
       console.log("Tagging instance", err ? "failure" : "success");
    });
 
+ var param2 = {
+    InstanceIds: [instanceId],
+    };
+
+
 // Call EC2 to retrieve the policy for selected bucket
-ec2.describeInstances(params, function(err, data) {
+ec2.describeInstances(param2, function(err, data) {
     if (err) {
       console.log("Error", err.stack);
     } else {

@@ -7,10 +7,9 @@ AWS.config.loadFromPath('./config.json');
 // Create EC2 service object
 ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
-var params = {
-    InstanceIds: ['INSTANCE_ID'],
-    DryRun: true
-  };
+ var params = {
+    InstanceIds: ['i-007042b965dc79561'],
+    };
 
 // Call EC2 to retrieve the policy for selected bucket
 ec2.describeInstances(params, function(err, data) {
