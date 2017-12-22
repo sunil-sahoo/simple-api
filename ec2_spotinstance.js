@@ -1,7 +1,7 @@
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
-//AWS.config fir AccessKey
+//AWS.config file AccessKey
 AWS.config.loadFromPath('../config.json');
 
 // Create EC2 service object
