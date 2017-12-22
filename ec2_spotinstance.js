@@ -21,7 +21,7 @@ var params = {
 		     "sg-78d0df10"
 	     ]
      }, 
-	SpotPrice: "0.0088", 
+	SpotPrice: "0.0090", 
 	Type: "one-time"
 };
 
