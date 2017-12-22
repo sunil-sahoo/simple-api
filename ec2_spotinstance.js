@@ -12,8 +12,7 @@ var params = {
       BlockDurationMinutes: 60,
      LaunchSpecification: {
 	     ImageId: "ami-a73c76c8", //Customized image
-	     InstanceType: "t2.micro", 
-//	     KeyName: "test-ec2-key", 
+	     InstanceType: "t2.micro",
 	     Placement: {
 		     AvailabilityZone: "ap-south-1b"
 	     }, 
@@ -21,7 +20,7 @@ var params = {
 		     "sg-78d0df10"
 	     ]
      }, 
-	SpotPrice: "0.0090", 
+	SpotPrice: "0.0095", 
 	Type: "one-time"
 };
 
