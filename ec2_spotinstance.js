@@ -2,16 +2,16 @@
 var AWS = require('aws-sdk');
 // Set the region 
 //AWS.config file AccessKey
-AWS.config.loadFromPath('../config.json');
+AWS.config.loadFromPath('../config.json'); //This config.json file is needed to provide acces key of user to make API calls
 
 // Create EC2 service object
 var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
     InstanceCount: 1, 
-      BlockDurationMinutes: 60,
+      BlockDurationMinutes: 60, // Time should be multiple of 60mins
      LaunchSpecification: {
-	     ImageId: "ami-a73c76c8", //Customized image
+	     ImageId: "ami-a73c76c8", //Customized ubuntu 16.04 image with apache and node installed
 	     InstanceType: "t2.micro",
 	     Placement: {
 		     AvailabilityZone: "ap-south-1b"
@@ -20,7 +20,7 @@ var params = {
 		     "sg-78d0df10"
 	     ]
      }, 
-	SpotPrice: "0.0095", 
+	SpotPrice: "0.0095", // Maximum price willing to pay
 	Type: "one-time"
 };
 
