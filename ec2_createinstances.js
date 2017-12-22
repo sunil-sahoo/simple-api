@@ -32,4 +32,14 @@ ec2.runInstances(params, function(err, data) {
    ec2.createTags(params, function(err) {
       console.log("Tagging instance", err ? "failure" : "success");
    });
+
+// Call EC2 to retrieve the policy for selected bucket
+ec2.describeInstances(params, function(err, data) {
+    if (err) {
+      console.log("Error", err.stack);
+    } else {
+      console.log("Success", JSON.stringify(data));
+    }
+  });
+
 });
