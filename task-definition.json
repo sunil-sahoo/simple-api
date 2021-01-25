@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:529176168733:task-definition/test:1",
     "containerDefinitions": [
         {
             "name": "test",
@@ -27,8 +26,6 @@
         }
     ],
     "family": "test",
-    "taskRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
-    "executionRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
