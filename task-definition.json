@@ -22,7 +22,7 @@
 		"name": "test"
 		
 	}],
-	"family": "TASK_DEF_NAME",
+	"family": "test",
 	"requiresCompatibilities": ["FARGATE"],
 	"taskRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
 	"executionRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
