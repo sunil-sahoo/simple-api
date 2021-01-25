@@ -1,7 +1,8 @@
 {
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:529176168733:task-definition/test:2",
     "containerDefinitions": [
         {
-            "name": "test",
+            "name": "teamie-web-stage-RQ",
             "image": "529176168733.dkr.ecr.ap-southeast-1.amazonaws.com/mobile-api:stage",
             "cpu": 0,
             "portMappings": [
@@ -26,8 +27,10 @@
         }
     ],
     "family": "test",
+    "taskRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::529176168733:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
